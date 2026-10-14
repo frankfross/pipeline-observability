@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pipeline-observability"
+version = "0.1.0"
+description = "A small run-metadata store for data pipelines: log runs, durations, row counts; query summary views."
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+include = ["pipeline_observability*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
